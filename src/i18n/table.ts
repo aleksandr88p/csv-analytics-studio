@@ -1,0 +1,31 @@
+export const tableEn = {
+  label: 'Dataset table',
+  caption: 'Dataset table: {{name}}',
+  pagination: 'Table pagination',
+  pageSize: 'Rows per page',
+  page: 'Page {{current}} of {{total}}',
+  first: 'First',
+  previous: 'Previous',
+  next: 'Next',
+  last: 'Last',
+  emptyValue: 'Empty',
+  editCell: 'Edit cell',
+  savingCell: 'Saving cell change…',
+  editHint: 'Double-click a cell to edit · Enter to save · Esc to cancel',
+}
+
+export const tableRu: Record<keyof typeof tableEn, string> = {
+  label: 'Таблица набора данных',
+  caption: 'Таблица набора данных: {{name}}',
+  pagination: 'Страницы таблицы',
+  pageSize: 'Строк на странице',
+  page: 'Страница {{current}} из {{total}}',
+  first: 'Первая',
+  previous: 'Назад',
+  next: 'Вперёд',
+  last: 'Последняя',
+  emptyValue: 'Пусто',
+  editCell: 'Редактирование ячейки',
+  savingCell: 'Сохраняем изменение ячейки…',
+  editHint: 'Дважды нажмите на ячейку для редактирования · Enter — сохранить · Esc — отменить',
+}

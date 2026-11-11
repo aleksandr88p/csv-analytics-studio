@@ -1,0 +1,31 @@
+export const exportEn = {
+  heading: 'Export CSV',
+  protect: 'Protect against CSV formula injection',
+  explanation: "Protection adds an apostrophe to fields starting with formula signs, including negative values. Leading whitespace and control characters are also checked. For example, -42 becomes '-42. This applies to the downloaded file only.",
+  affected: 'Potentially unsafe fields, including headers: {{count}}.',
+  changed: 'Fields that protection will modify: {{count}}.',
+  missing: 'Missing fields exported as empty CSV fields: {{count}}.',
+  warning: 'Spreadsheet applications may interpret these values as formulas when you open the file.',
+  confirmRisk: 'I understand the risk and confirm downloading without formula protection.',
+  download: 'Download CSV',
+  error: 'The CSV download could not be started. The dataset may have changed or browser storage may be unavailable. Reload the dataset and try again.',
+  preparing: 'Preparing export…',
+  serializing: 'Creating CSV file…',
+  retry: 'Retry export',
+}
+
+export const exportRu: Record<keyof typeof exportEn, string> = {
+  heading: 'Экспорт CSV',
+  protect: 'Защита от CSV formula injection',
+  explanation: "Защита добавляет апостроф к полям, начинающимся со знаков формул, включая отрицательные значения. Пробелы и управляющие символы перед ними тоже проверяются. Например, -42 станет '-42. Это влияет только на скачиваемый файл.",
+  affected: 'Потенциально опасные поля, включая заголовки: {{count}}.',
+  changed: 'Защита изменит полей: {{count}}.',
+  missing: 'Отсутствующие поля будут выгружены как пустые поля CSV: {{count}}.',
+  warning: 'Табличный редактор может интерпретировать эти значения как формулы при открытии файла.',
+  confirmRisk: 'Я понимаю риск и подтверждаю скачивание без защиты от формул.',
+  download: 'Скачать CSV',
+  error: 'Не удалось начать скачивание CSV. Возможно, набор изменился или хранилище браузера недоступно. Обновите набор и попробуйте снова.',
+  preparing: 'Готовим экспорт…',
+  serializing: 'Создаём файл CSV…',
+  retry: 'Повторить экспорт',
+}

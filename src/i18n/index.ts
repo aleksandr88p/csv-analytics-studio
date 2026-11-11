@@ -1,6 +1,10 @@
 import { createInstance } from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import type { Language } from '../app/preferences'
+import { csvEn, csvRu } from './csv'
+import { storageEn, storageRu } from './storage'
+import { tableEn, tableRu } from './table'
+import { exportEn, exportRu } from './export'
 
 const en = {
   workspace: 'Workspace',
@@ -10,8 +14,11 @@ const en = {
   theme: 'Theme',
   light: 'Light',
   dark: 'Dark',
-  dataHeading: 'No dataset open',
-  dataDescription: 'Your CSV data will appear here once import is available.',
+  welcomeHeading: 'Welcome to CSV Analytics Studio',
+  welcomeDescription: 'Upload a CSV file to start working with your data.',
+  uploadCsv: 'Upload CSV',
+  tryDemo: 'Try demo data',
+  comingSoon: 'Coming soon',
   dashboardHeading: 'Your dashboard is empty',
   dashboardDescription: 'Charts for your active dataset will appear here once visualization is available.',
 }
@@ -24,8 +31,11 @@ const ru: Record<keyof typeof en, string> = {
   theme: 'Тема',
   light: 'Светлая',
   dark: 'Тёмная',
-  dataHeading: 'Нет открытого набора данных',
-  dataDescription: 'Здесь появятся данные CSV, когда станет доступен импорт.',
+  welcomeHeading: 'Добро пожаловать в CSV Analytics Studio',
+  welcomeDescription: 'Загрузите CSV-файл, чтобы начать работу с данными.',
+  uploadCsv: 'Загрузить CSV',
+  tryDemo: 'Попробовать демоданные',
+  comingSoon: 'Скоро',
   dashboardHeading: 'Дашборд пока пуст',
   dashboardDescription: 'Здесь появятся графики активного набора, когда станет доступна визуализация.',
 }
@@ -37,8 +47,8 @@ export async function createI18n(language: Language) {
     fallbackLng: 'en',
     supportedLngs: ['en', 'ru'],
     resources: {
-      en: { translation: en },
-      ru: { translation: ru },
+      en: { translation: { ...en, csv: csvEn, storage: storageEn, table: tableEn, export: exportEn } },
+      ru: { translation: { ...ru, csv: csvRu, storage: storageRu, table: tableRu, export: exportRu } },
     },
     interpolation: { escapeValue: false },
   })
